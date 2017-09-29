@@ -1,0 +1,16 @@
+---
+applications:
+ - name: web
+   path: web
+   memory: 128M
+   env:
+    destinations: >
+      [
+        {
+          "name":"myapp18",
+          "url":"https://myapp18.cfapps.sap.hana.ondemand.com/",
+          "forwardAuthToken": true
+        }
+      ]
+   services:
+    - myuaa2
