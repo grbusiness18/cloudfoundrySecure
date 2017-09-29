@@ -18,12 +18,6 @@ app.use(passport.authenticate('JWT', { session: false }));
 app.get('/', function (req, res, next) {
   console.log("Request CF :" + req)
 
-  client.get("https://pgdmain.wdf.sap.corp/sap/opu/odata/sap/ZHARMONY_NDEX/FilghtSet", function(data, response) {
-
-    console.log(data);
-    // raw response
-    console.log(response);
-  })
   res.send('Application user: ' + req.user.id);
 });
 
